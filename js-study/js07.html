@@ -1,0 +1,106 @@
+<script>
+
+    //number
+    // const num = 1.123123213;
+
+    // console.log(`${num} toFixed() : ${num.toFixed()}`);
+    // console.log(`${num} toString() : ${num.toString()}`);
+    // console.log(typeof num);
+    // console.log(typeof num.toString()); 
+
+    const str1 = new String("ABcd");
+    const str = "ABcd"; // 문자의 배열
+    console.log(`${str} charAt(0) : ${str.charAt(1)}`);
+    console.log(`${str} concat("e") : ${str.concat("e")}`);
+    console.log(`${str} endWith("D") : ${str.endsWith("D")}`);
+    console.log(`${str} startsWith("A") : ${str.startsWith("A")}`);
+    console.log(`${str} includes("cd") : ${str.includes("cd")}`);
+    console.log(`${str} indexof("d") : ${str.indexOf("d")}`);
+    console.log(`${str} length("d") : ${str.length}`);
+    console.log(`${str} padStart(4) : ${str.padStart(8)}`);
+    console.log(`${str} replace("cd","") : ${str.replace("cd","")}`);
+    console.log(`${str} slice(1,3) : ${str.slice(1,3)}`);
+    console.log(`${str} split("") : ${str.split("")}`);
+    console.log(`${str} substring(1) : ${str.substring(1)}`);
+    console.log(`${str} toLowerCase() : ${str.toLowerCase()}`);
+    console.log(`${str} toUpperCase() : ${str.toUpperCase()}`);
+    console.log(`${str} trim() : ${str.trim()}`);
+    
+
+    //array
+    const arr = ["A","B","c","d"]
+    console.log(`${arr} concat("e","f") : ${arr.concat("e","f")}`);
+    console.log(`${arr} concat("g") : ${arr.concat("g")}`);
+    // console.log(`${arr} copyWithin(0,1,2) : ${arr.copyWithin(0,1,2)}`);
+    // console.log(`${arr} fill("a") : ${arr.fill("a")}`);
+    console.log([["a","b"],["c","d"]].flat());
+    console.log(`${arr} pop() : ${arr.pop()}`);
+    console.log(`${arr} push("g") : ${arr.push("g")}`);
+    console.log(`${arr} join(" ") : ${arr.join(" ")}`);
+    console.log(`${arr} reverse() : ${arr.reverse()}`);
+    
+
+
+    //foreach, filter, nap, reduce, every, find, some
+    //foreach -> 반복작업
+    const callbackFn = (value) => {
+        console.log(value);
+    }
+    arr.forEach(callbackFn);
+    arr.forEach(value => console.log(value));
+    //filtet -> 조건 필터링해서 배열 반환
+    const predicate1 = (value,index,array) => {
+        return value.charCodeAt(0) > 98;
+    };
+    console.log(arr.filter(predicate1));
+    console.log(arr.filter((value)=>value == "g"));
+    //map -> 배열의 요소를 변환
+    console.log(arr.map((value)=>value.charCodeAt(0)));
+    //reduce -> 요소합치기
+    // every -> 모든 요소가 조건에 부합하는지
+    console.log(
+        arr.every((value) => undefined));
+    // some -> 하나의 요소라도 조건에 부합하는지
+    //find -> 조건에 부합하는 요소 찾기
+
+
+    //obj
+    const obj = {
+        key: "value",
+        func(value){
+            return value;
+        },
+        array:[1,2,3,4],
+        obj: {
+            key: "value1"
+        },
+    };
+    console.log(obj.key);
+    console.log(obj.obj.key);
+    console.log(obj.func());
+
+    
+    //Math
+    const arr1=[1,2,3];
+    console.log(Math.PI);
+    console.log(Math.abs(-1));
+    console.log(`Math.max(...arr) : ${Math.max(...arr1)}`);
+    console.log(`Math.min(...arr) : ${Math.min(...arr1)}`);
+    console.log(`Math.random(...arr) : ${Math.floor(Math.random() * 45)}`);
+    //Date
+    console.log(`Date.now() : ${Date.now()}`);
+    const mydate = new Date("2020-11-10 00:00:00");
+    console.log(`mydate.getMonth() : ${mydate.getMonth()}`);
+    console.log(`mydate.getDay() : ${mydate.getDay()}`);
+    console.log(`mydate.getDate() : ${mydate.getDate()}`);
+
+
+
+
+
+
+    //내장된 표준 라이브러리 
+    //console.log(num.toFixed(2)); //소수점 자리수 지정 가능
+    //console.log(num.toExponential(4));
+
+</script>.

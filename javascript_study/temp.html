@@ -1,17 +1,12 @@
-<script src="lodash.js"></script>
 <script>
-  const a = {
-    val1: {
-      sub1: {
-        ssub1: {},
-      },
-    },
-    val2: [],
-    val3: [],
-  };
+    var answer = '';
 
-  const b = _.cloneDeep(a);
+    let idx = s.length/2;
+    if(s.length%2 == 0){
+        answer = s[idx-1]+s[idx];
+    } else{
+        answer = s[Math.floor(idx)];
+    }
 
-  console.log(a == b);
-  console.log(a.val1 == b.val1);
+    return answer;
 </script>
